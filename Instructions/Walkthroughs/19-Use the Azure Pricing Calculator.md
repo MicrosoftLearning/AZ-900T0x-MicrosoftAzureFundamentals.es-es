@@ -1,19 +1,25 @@
 ---
 wts:
-    title: '19 - Usar la calculadora de precios de Azure (10 min)'
-    module: 'Módulo 06: Descripción de los acuerdos de nivel de servicio y Azure Cost Management'
+  title: '19: Usar la calculadora de precios de Azure (10 min)'
+  module: 'Module 06: Describe Azure cost management and service level agreements'
+ms.openlocfilehash: 9b071ca3caa80cc8f78541a61010b5b2d0fe8053
+ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137908364"
 ---
-# 19: Usar la calculadora de precios (10 min)
+# <a name="19---use-the-pricing-calculator-10-min"></a>19: Usar la calculadora de precios (10 min)
 
-En este tutorial, utilizaremos la Calculadora de precios de Azure para generar una estimación de costes para una máquina virtual Azure y recursos de red relacionados.
+En este tutorial, utilizaremos la calculadora de precios de Azure para generar una estimación de costes para una máquina virtual de Azure y los recursos de red relacionados.
 
-# Tarea 1: Configurar la calculadora de precios
+# <a name="task-1-configure-the-pricing-calculator"></a>Tarea 1: Configurar la calculadora de precios
 
 En esta tarea, calcularemos el coste de una infraestructura de muestra con la Calculadora de precios de Azure. 
 
 **Nota**: Para crear una estimación de la Calculadora de precios de Azure, este tutorial ofrece configuraciones de ejemplo para la VM y recursos relacionados. Use estas configuraciones de ejemplo, o bien proporcione a la Calculadora de precios de Azure detalles de sus requisitos de recursos *reales*.
 
-1. En el explorador, navegue hasta la página web [Calculadora de precios de Azure](https://azure.microsoft.com/es-es/pricing/calculator/).
+1. En el explorador, navegue hasta la página web [Calculadora de precios de Azure](https://azure.microsoft.com/en-us/pricing/calculator/).
 
 2. Para agregar detalles de la configuración de su VM, haga clic en **Maquinas virtuales** en la pestaña **Productos**. Desplácese hacia abajo para ver los detalles de la máquina virtual. 
 
@@ -23,11 +29,11 @@ En esta tarea, calcularemos el coste de una infraestructura de muestra con la Ca
 
 4. Modifique la configuración de VM predeterminada.
 
-    | Configuración | Valor |
+    | Configuración | Value |
     | -- | -- |
-    | Región | **Norte de Europa** |
+    | Region | **Norte de Europa** |
     | Sistema operativo | **Windows** |
-    | Tipo | **(Solo sistema operativo)** |
+    | Tipo | **(Solo para sistema operativo)** |
     | Nivel | **Estándar** |  
     | Instancia | **A2: 2 núcleos, 3,5 GB de RAM, 135 GB de almacenamiento temporal** |
 
@@ -39,7 +45,7 @@ En esta tarea, calcularemos el coste de una infraestructura de muestra con la Ca
 
    ![Captura de pantalla del área de opciones de facturación de VM en la página web de estimación de la calculadora de precios de Azure. La opción de facturación de pago por uso resaltada indica cómo especificar una opción de facturación para una máquina virtual dentro de una estimación de la calculadora de precios de Azure.](../images/1903.png)
 
-6. En Azure, un mes se define como 730 horas. Si su VM necesita estar disponible el 100 por ciento del tiempo cada mes, establezca el valor de horas por mes en `730`. El ejemplo de este tutorial necesita que una VM esté disponible el 50 por ciento del tiempo cada mes.
+6. En Azure, un mes se define como 730 horas. Si su VM debe estar disponible el 100 por ciento del tiempo cada mes, establezca el valor de horas por mes en `730`. El ejemplo de este tutorial necesita que una VM esté disponible el 50 por ciento del tiempo cada mes.
 
     Deje el número de máquinas virtuales establecido en `1` y cambie el valor de las horas por mes a `365`.
 
@@ -47,9 +53,9 @@ En esta tarea, calcularemos el coste de una infraestructura de muestra con la Ca
 
 7. En el panel **Discos de sistema operativo administrados**, modifique la configuración del almacenamiento de VM predeterminada.
 
-    | Nivel | Tamaño del disco | Número de discos | Instantánea | Transacciones de almacenamiento |
+    | Nivel | Tamaño del disco | Número de discos | Depurador de | Transacciones de almacenamiento |
     | ---- | --------- | --------------- | -------- | -------------------- |
-    | HDD estándar | S30: 1024 GiB | 1 | Apagado | 10 000 |
+    | HDD estándar | S30: 1 024 GiB | 1 | Desactivado | 10 000 |
 
    ![Captura de pantalla del área de opciones de Discos de SO administrados dentro de la página web de estimación de la calculadora de precios de Azure. Las opciones destacadas de tipo de nivel, tamaño de disco, cantidad de discos y cantidad de transacciones de almacenamiento indican cómo especificar una configuración de almacenamiento para una VM dentro de una estimación de la calculadora de precios de Azure.](../images/1905.png)
 
@@ -57,9 +63,9 @@ En esta tarea, calcularemos el coste de una infraestructura de muestra con la Ca
 
    ![Captura de pantalla del área de productos de redes dentro de la página web de la calculadora de precios de Azure. Los iconos resaltados de redes, agregar ancho de banda y ver ancho de banda indican cómo agregar y ver detalles de la configuración de ancho de banda de redes en una estimación de la calculadora de precios de Azure.](../images/1906.png)
 
-9. Agregue un nombre para la configuración de ancho de banda de su máquina virtual. Este ejemplo de tutorial utiliza el nombre **Ancho de banda: Windows VM**. Modifique la configuración de ancho de banda predeterminada. Para ello, agregue los siguientes detalles.
+9. Agregue un nombre para la configuración de ancho de banda de su máquina virtual. Este ejemplo de tutorial utiliza el nombre **Ancho de banda: VM Windows**. Modifique la configuración de ancho de banda predeterminada. Para ello, agregue los siguientes detalles.
 
-    | Región | Cantidad de transferencia de datos salientes de la Zona 1 |
+    | Region | Cantidad de transferencia de datos salientes de la Zona 1 |
     | ------ | -------------------------------------- |
     | Norte de Europa | 50 GB |
 
@@ -69,22 +75,22 @@ En esta tarea, calcularemos el coste de una infraestructura de muestra con la Ca
 
     ![Captura de pantalla del área de productos de redes dentro de la página web de la calculadora de precios de Azure. Los iconos resaltados de Redes, Agregar Application Gateway y Ver Application Gateway, indican cómo agregar y ver detalles de la configuración de Application Gateway en una estimación de la Calculadora de precios de Azure.](../images/1908.png)
 
-11. Agregue un nombre para la configuración de su Application Gateway. Este tutorial utiliza el nombre **App Gateway: Windows VM**. Para modificar la configuración predeterminada de Application Gateway, agregue los siguientes detalles.
+11. Agregue un nombre para la configuración de su Application Gateway. Este tutorial utiliza el nombre **App Gateway: VM Windows**. Para modificar la configuración predeterminada de Application Gateway, agregue los siguientes detalles.
 
-    | Configuración | Valor |
+    | Configuración | Value |
     | -- | -- |
-    | Región | **Norte de Europa** |
-    | Nivel | **Básico** |
-    | Tamaño | **Pequeño** |
+    | Region | **Norte de Europa** |
+    | Nivel | **Basic** |
+    | Size | **Pequeño** |
     | Instancias | **1** |  
     | Horas | **365** |
     | Datos procesados | **50 GB** |
-    | Zona 1: Norteamérica, Europa | **50 GB**|
+    | Zona 1: Norteamérica, Europa | **50 GB**|
 
     ![Captura de pantalla del área de configuración de la puerta de enlace de aplicaciones dentro de la página web de estimación de la calculadora de precios de Azure.](../images/1909.png)
 
 
-# Tarea 2: Revisar el presupuesto de precios
+# <a name="task-2-review-the-pricing-estimate"></a>Tarea 2: Revisar el presupuesto de precios
 
 En esta tarea, revisaremos los resultados de la Calculadora de precios de Azure. 
 
